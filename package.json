@@ -1,0 +1,27 @@
+{
+  "name": "fillout",
+  "version": "1.0.0",
+  "description": "takehome assessment",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "author": "adamc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/lodash": "^4.14.202",
+    "@types/minimist": "^1.2.5",
+    "@types/mysql": "^2.15.25",
+    "@types/node": "^20.11.24",
+    "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
