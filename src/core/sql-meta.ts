@@ -4,11 +4,15 @@ import { IsoDateTransformer } from '../utilities/';
 
 export class SqlMeta {
 
+	private defaultIncludeEditLink: boolean = false;
+
 	private defaultLimit: string = '150';
 
 	private defaultOffset: string = '0';
 
 	private defaultSort: string = 'asc';
+
+	private defaultStatus: string = '1';
 
 	public afterDate!: string;
 
@@ -61,7 +65,7 @@ export class SqlMeta {
 		if (typeof this.includeEditLink === 'string' && this.includeEditLink === 'true') {
 			return true;
 		}
-		return false;
+		return this.defaultIncludeEditLink;
 	}
 
 	public getLimitSqlClause(): sqlClause<string> {
@@ -118,7 +122,7 @@ export class SqlMeta {
 			}
 		}
 		return {
-			boundParams: ['1'],
+			boundParams: [`${this.defaultStatus}`],
 			sql: `${columnName} = ?`
 		};
 	}
