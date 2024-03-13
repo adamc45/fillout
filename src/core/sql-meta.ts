@@ -104,7 +104,7 @@ export class SqlMeta {
 		}
 		return {
 			boundParams: [],
-			sql: `ORDER ${columnName} BY ${this.defaultSort}`
+			sql: `ORDER BY ${columnName} ${this.defaultSort}`
 		};
 	}
 
